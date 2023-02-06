@@ -1,0 +1,36 @@
+// HERO STYLES //
+
+#hero-background {
+	min-height: 100vh;
+	background: linear-gradient(rgba(99, 72, 17, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero.jpg') center/cover no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	#hero-banner-container {
+		color: var(--creme);
+		text-align: center;
+		padding: 0 2rem;
+		letter-spacing: var(--spacing-big);
+		word-spacing: 0.25rem;
+
+		#hero-heading {
+			font-size: var(--fsize-hero);
+		}
+
+		#hero-text {
+			margin: 1rem;
+		}
+
+		.btn {
+			background: var(--creme);
+			color: var(--grey);
+			font-size: var(--fsize-logos);
+			letter-spacing: var(--spacing-small);
+			padding: 0.5rem 1rem;
+			border: 2px solid transparent;
+			box-shadow: 0.125rem 0.125rem 0.125rem 0.0625rem var(--grey);
+			cursor: pointer;
+		}
+	}
+}

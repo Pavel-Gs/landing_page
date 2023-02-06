@@ -1,5 +1,40 @@
+/* CSS VARIABLES */
+:root {
+	/* colors */
+	--brown: #634811;
+	--brown: rgb(99, 72, 17);
+	--creme: #FCEAC5;
+	--yellow: #E3A427;
+	--grey: #66625A;
+	--orange: #B3811E;
+	/* font size */
+	--fsize-hero: 3rem;
+	--fsize-logos: 1.5rem;
+	--fsize-text: 1.25rem;
+	/* letter spacing */
+	--spacing-big: 0.3rem;
+	--spacing-small: 0.125rem;
+	/* transitions */
+	--transition-in: 0.3s ease-in;
+	--transition-out: 0.3s ease-out;
+}
+
 /* GLOBAL STYLES */
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--gray);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
 }
