@@ -1,33 +1,29 @@
 // SASS VARIABLES //
-$break-1: 800px;
+$break-1: 850px;
 
-// HEADER STYLES //
+// // HEADER STYLES // //
 #header-section {
 	position: fixed;
 	top: 0;
 	width: 100%;
 	background: var(--creme);
-	box-shadow: 0 0.125rem 0.5rem 0.25rem var(--grey);
+	box-shadow: 0 0.25rem 0.25rem var(--grey);
 
 	#header-container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		max-width: 1280px;
+		max-width: var(--page-max-width);
 		margin: 0 auto;
-		padding: 3rem 1rem;
-
-		@media screen and (max-width: $break-1) {
-			padding: 3rem 3rem;
-		}
+		padding: var(--section-pdg-bt) var(--article-pdg);
 
 		// header logo container //
 		#header-logo-container {
 			#header-logo {
 				position: absolute;
-				top: 0.5rem;
-				height: 7rem;
-				transform: translateX(3.6rem);
+				top: 0.375rem;
+				height: 4.75rem;
+				transform: translateX(4.625rem);
 			}
 
 			#header-logo-text {
@@ -63,6 +59,7 @@ $break-1: 800px;
 
 				a {
 					color: var(--grey);
+					text-decoration: none;
 					transition: var(--transition-out);
 
 					&:hover {
@@ -82,7 +79,7 @@ $break-1: 800px;
 			}
 
 			.header-icons-li {
-				margin-left: 0.25rem;
+				margin-left: 1.125rem;
 				font-size: var(--fsize-logos);
 				color: var(--yellow);
 				text-shadow: 0.0625rem 0.0625rem 0.0625rem var(--grey);

@@ -6,15 +6,15 @@ import headerLogo from '../images/logo.gif'
 // HEADER NAV-LINKS LIST
 const headerNavList = [{
 	headerNavText: "About",
-	headerNavHref: '#about',
+	headerNavHref: '#about-section',
 	id: crypto.randomUUID(),
 }, {
 	headerNavText: "Highlights",
-	headerNavHref: '#highlights',
+	headerNavHref: '#highlights-section',
 	id: crypto.randomUUID(),
 }, {
 	headerNavText: "Projects",
-	headerNavHref: '#projects',
+	headerNavHref: '#projects-section',
 	id: crypto.randomUUID(),
 }, {
 	headerNavText: "Contacts",
@@ -41,6 +41,12 @@ const headerIconsList = [{
 	headerIconTarget: '_blank',
 	iClass: 'fa-brands fa-linkedin',
 	id: crypto.randomUUID(),
+}, {
+	headerIconHref: 'https://www.youtube.com/watch?v=0FvEj4ed4ww&t=3s',
+	headerIconRel: 'noopener noreferrer',
+	headerIconTarget: '_blank',
+	iClass: 'fa-brands fa-square-youtube',
+	id: crypto.randomUUID(),
 },];
 
 // NAV RENDER FUNCTION
@@ -64,7 +70,7 @@ export const HeaderStructure = () => {
 
 			<div id='header-logo-container'>
 				<img id='header-logo' src={headerLogo} alt="total station logo" />		{/* header logo */}
-				<p id='header-logo-text'><span>GEOMATICS</span><br />CONSULTING</p>
+				<h2 id='header-logo-text'><span>GEOMATICS</span><br />CONSULTING</h2>
 			</div>
 
 			<ul id='header-nav-ul'>		{/* iterate header nav links */}

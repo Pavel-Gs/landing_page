@@ -1,0 +1,54 @@
+// SASS VARIABLES
+$break-1: 850px;
+$break-2: 500px;
+
+// // HIGHLIGHTS STYLES // //
+#highlights-section {
+	scroll-margin-top: var(--scroll-mrg-tp);
+	background: var(--creme-light);
+	text-align: center;
+	padding-bottom: var(--section-pdg-bt);
+
+	h2 {
+		font-size: var(--fsize-logos);
+		letter-spacing: var(--spacing-small);
+		color: var(--orange);
+		padding-top: var(--section-pdg-tp);
+	}
+
+	#highlights-article {
+		padding: var(--article-pdg);
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 2rem;
+		row-gap: 2rem;
+		max-width: var(--page-max-width);
+		margin: 0 auto;
+		font-size: var(--fsize-text);
+
+		@media screen and (max-width: $break-1) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media screen and (max-width: $break-2) {
+			grid-template-columns: 1fr;
+		}
+
+		#highlights-container {
+			display: grid;
+			grid-template-columns: 1fr 4fr;
+			text-align: left;
+
+			i {
+				font-size: 3rem;
+				margin-right: 1rem;
+				color: var(--orange);
+				text-align: center;
+			}
+
+			#highlights-text {
+				color: var(--grey);
+			}
+		}
+	}
+}

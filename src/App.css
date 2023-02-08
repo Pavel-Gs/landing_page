@@ -1,25 +1,39 @@
-/* CSS VARIABLES */
+/* CSS VARIABLES (sass variables are in corresponding files)*/
 :root {
 	/* colors */
 	--brown: #634811;
-	--brown: rgb(99, 72, 17);
 	--creme: #FCEAC5;
+	--creme-light: #fceac590;
 	--yellow: #E3A427;
 	--grey: #66625A;
 	--orange: #B3811E;
 	/* font size */
 	--fsize-hero: 3rem;
-	--fsize-logos: 1.5rem;
-	--fsize-text: 1.25rem;
+	--fsize-logos: 1.625rem;
+	--fsize-text: 1rem;
 	/* letter spacing */
-	--spacing-big: 0.3rem;
+	--spacing-big: 0.3125rem;
 	--spacing-small: 0.125rem;
+	/* widths */
+	--page-max-width: 1280px;
+	/* paddings and margins */
+	--section-pdg-tp: 4rem;
+	--section-pdg-bt: 2rem;
+	--article-pdg: 2rem;
+	--btn-pdg: 0.5rem 1rem;
+	--scroll-mrg-tp: 6rem;
+	/* shadows */
+	--btn-shadow: 0.125rem 0.125rem 0.125rem;
 	/* transitions */
 	--transition-in: 0.3s ease-in;
 	--transition-out: 0.3s ease-out;
 }
 
 /* GLOBAL STYLES */
+html {
+	scroll-behavior: smooth;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -27,7 +41,6 @@
 }
 
 body {
-	background: var(--gray);
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -35,6 +48,27 @@ li {
 	list-style: none;
 }
 
-a {
+.section-btn {
+	color: var(--creme);
 	text-decoration: none;
+	background: var(--orange);
+	font-size: var(--fsize-text);
+	letter-spacing: var(--spacing-small);
+	padding: var(--btn-pdg);
+	/*border-radius: 0.3125rem;*/
+	box-shadow: var(--btn-shadow) var(--grey);
+	cursor: pointer;
+	transition: var(--transition-out);
+}
+
+.section-btn:hover {
+	background: var(--yellow);
+	box-shadow: none;
+	transition: var(--transition-in);
+}
+
+@media screen and (min-width: 850px) {
+	.section-btn {
+		display: none;
+	}
 }

@@ -1,11 +1,12 @@
 #hero-background {
   min-height: 100vh;
-  background: linear-gradient(rgba(99, 72, 17, 0.7), rgba(0, 0, 0, 0.7)), url("../images/hero.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(99, 72, 17, 0.65), rgba(0, 0, 0, 0.65)), url("../images/hero.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 #hero-background #hero-banner-container {
+  max-width: var(--page-max-width);
   color: var(--creme);
   text-align: center;
   padding: 0 2rem;
@@ -15,16 +16,34 @@
 #hero-background #hero-banner-container #hero-heading {
   font-size: var(--fsize-hero);
 }
-#hero-background #hero-banner-container #hero-text {
-  margin: 1rem;
+@media screen and (max-width: 500px) {
+  #hero-background #hero-banner-container #hero-heading {
+    font-size: var(--fsize-logos);
+    letter-spacing: normal;
+  }
 }
-#hero-background #hero-banner-container .btn {
+#hero-background #hero-banner-container #hero-text {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: var(--fsize-text);
+}
+#hero-background #hero-banner-container #hero-btn {
+  color: var(--orange);
+  text-decoration: none;
   background: var(--creme);
-  color: var(--grey);
   font-size: var(--fsize-logos);
   letter-spacing: var(--spacing-small);
-  padding: 0.5rem 1rem;
+  padding: var(--btn-pdg);
   border: 2px solid transparent;
-  box-shadow: 0.125rem 0.125rem 0.125rem 0.0625rem var(--grey);
+  /*border-radius: 0.3125rem;*/
+  box-shadow: var(--btn-shadow) var(--grey);
   cursor: pointer;
+  transition: var(--transition-out);
+}
+#hero-background #hero-banner-container #hero-btn:hover {
+  background: transparent;
+  border: 2px solid var(--creme);
+  color: var(--creme);
+  box-shadow: none;
+  transition: var(--transition-in);
 }/*# sourceMappingURL=Hero.css.map */
