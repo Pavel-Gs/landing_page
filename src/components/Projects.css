@@ -1,0 +1,62 @@
+#projects-section {
+  background: var(--creme);
+}
+#projects-section #projects-h4 {
+  color: var(--grey);
+}
+#projects-section article {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+#projects-section article div {
+  position: relative;
+  background: linear-gradient(rgba(99, 72, 17, 0.5), rgba(0, 0, 0, 0.9));
+}
+#projects-section article div:hover img {
+  opacity: 0.8;
+  filter: sepia(0);
+  transition: var(--transition-in);
+}
+#projects-section article div:hover .project-h4 {
+  background: rgba(99, 72, 17, 0.85);
+  padding: 0.625rem 0.75rem 0.625rem 2.5rem;
+  transition: var(--transition-in);
+}
+#projects-section article div:hover p {
+  background: rgba(99, 72, 17, 0.85);
+  padding: 0.5rem 0.75rem;
+  transition: var(--transition-in);
+}
+#projects-section article div img {
+  display: block;
+  width: 100%;
+  opacity: 0.65;
+  filter: sepia(10%);
+  transition: var(--transition-out);
+}
+#projects-section article div .project-h4 {
+  color: var(--creme);
+  background: rgba(99, 72, 17, 0.7);
+  -webkit-clip-path: polygon(0 0, 20% 100%, 100% 100%, 100% 100%, 100% 0);
+          clip-path: polygon(0 0, 20% 100%, 100% 100%, 100% 100%, 100% 0);
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  transition: var(--transition-out);
+}
+#projects-section article div p {
+  color: var(--creme);
+  background: rgba(99, 72, 17, 0.7);
+  padding: 0.75rem 0.75rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  transition: var(--transition-out);
+}/*# sourceMappingURL=Projects.css.map */

@@ -32,7 +32,7 @@ const highlightsList = [{
 	pText: "MicroSurvey CAD 2016 Premium, StarNet 11 Pro, QGIS",
 	id: crypto.randomUUID(),
 }, {
-	iClass: 'fa-solid fa-location-dot',
+	iClass: 'fa-solid fa-map-location-dot',
 	h4Heading: "Area",
 	pText: "Working anywhere in Metro Vancouver and Fraser Valley areas",
 	id: crypto.randomUUID(),
@@ -50,9 +50,9 @@ const highlightsList = [{
 
 // HIGHLIGHTS RENDER FUNCTION
 const HighlightsRender = ({ iClass, h4Heading, pText }) => {
-	return (<div id='highlights-container'>
+	return (<div className='highlight-container'>
 		<i className={iClass}></i>
-		<div id='highlights-text'>
+		<div>
 			<h4>{h4Heading}</h4>
 			<p>{pText}</p>
 		</div>
@@ -61,13 +61,13 @@ const HighlightsRender = ({ iClass, h4Heading, pText }) => {
 
 // HIGHLIGHTS STRUCTURE FUNCTION
 export const HighlightsStructure = () => {
-	return (<section id='highlights-section'>
+	return (<section className='chapter' id='highlights-section'>
 		<h2>HIGHLIGHTS</h2>
-		<article id='highlights-article'>
+		<article>
 			{highlightsList.map((i) => {
 				return (<HighlightsRender {...i} key={i.id} />);
 			})}
 		</article>
-		<a className='section-btn' href='#projects-section'>PROJECTS</a>
+		<a className='chapter-btn' href='#projects-section'>PROJECTS</a>
 	</section>);
 };

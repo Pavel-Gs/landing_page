@@ -1,49 +1,46 @@
-#hero-background {
-  min-height: 100vh;
+#hero-section {
+  padding: var(--section-pdg);
   background: linear-gradient(rgba(99, 72, 17, 0.65), rgba(0, 0, 0, 0.65)), url("../images/hero.jpg") center/cover no-repeat;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#hero-background #hero-banner-container {
+#hero-section article {
   max-width: var(--page-max-width);
+  letter-spacing: var(--spacing-big);
   color: var(--creme);
   text-align: center;
-  padding: 0 2rem;
-  letter-spacing: var(--spacing-big);
   word-spacing: 0.25rem;
 }
-#hero-background #hero-banner-container #hero-heading {
+#hero-section article h1 {
   font-size: var(--fsize-hero);
 }
 @media screen and (max-width: 500px) {
-  #hero-background #hero-banner-container #hero-heading {
+  #hero-section article h1 {
     font-size: var(--fsize-logos);
-    letter-spacing: normal;
+    letter-spacing: var(--spacing-small);
   }
 }
-#hero-background #hero-banner-container #hero-text {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  font-size: var(--fsize-text);
+#hero-section article p {
+  margin: 1rem 0 2rem 0;
 }
-#hero-background #hero-banner-container #hero-btn {
+#hero-section article a {
   color: var(--orange);
-  text-decoration: none;
   background: var(--creme);
   font-size: var(--fsize-logos);
   letter-spacing: var(--spacing-small);
   padding: var(--btn-pdg);
-  border: 2px solid transparent;
-  /*border-radius: 0.3125rem;*/
-  box-shadow: var(--btn-shadow) var(--grey);
-  cursor: pointer;
+  box-shadow: var(--btn-shadow);
   transition: var(--transition-out);
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
 }
-#hero-background #hero-banner-container #hero-btn:hover {
-  background: transparent;
-  border: 2px solid var(--creme);
+#hero-section article a:hover {
   color: var(--creme);
-  box-shadow: none;
+  border: 2px solid var(--creme);
   transition: var(--transition-in);
+  background: transparent;
+  box-shadow: none;
 }/*# sourceMappingURL=Hero.css.map */

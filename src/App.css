@@ -10,20 +10,18 @@
 	/* font size */
 	--fsize-hero: 3rem;
 	--fsize-logos: 1.625rem;
-	--fsize-text: 1rem;
 	/* letter spacing */
 	--spacing-big: 0.3125rem;
 	--spacing-small: 0.125rem;
 	/* widths */
 	--page-max-width: 1280px;
 	/* paddings and margins */
-	--section-pdg-tp: 4rem;
-	--section-pdg-bt: 2rem;
-	--article-pdg: 2rem;
+	--section-pdg: 4rem 2rem;
+	--heading-pdg: 0 0 2rem 0;
 	--btn-pdg: 0.5rem 1rem;
 	--scroll-mrg-tp: 6rem;
 	/* shadows */
-	--btn-shadow: 0.125rem 0.125rem 0.125rem;
+	--btn-shadow: 0.125rem 0.125rem 0.125rem var(--grey);
 	/* transitions */
 	--transition-in: 0.3s ease-in;
 	--transition-out: 0.3s ease-out;
@@ -48,27 +46,42 @@ li {
 	list-style: none;
 }
 
-.section-btn {
+.chapter {
+	scroll-margin-top: var(--scroll-mrg-tp);
+	padding: var(--section-pdg);
+	text-align: center;
+}
+
+.chapter h2 {
+	padding: var(--heading-pdg);
+	font-size: var(--fsize-logos);
+	letter-spacing: var(--spacing-small);
+	color: var(--orange);
+}
+
+.chapter-btn {
 	color: var(--creme);
-	text-decoration: none;
 	background: var(--orange);
 	font-size: var(--fsize-text);
 	letter-spacing: var(--spacing-small);
 	padding: var(--btn-pdg);
-	/*border-radius: 0.3125rem;*/
-	box-shadow: var(--btn-shadow) var(--grey);
-	cursor: pointer;
+	box-shadow: var(--btn-shadow);
 	transition: var(--transition-out);
+	text-decoration: none;
+	cursor: pointer;
+	display: none;
 }
 
-.section-btn:hover {
+.chapter-btn:hover {
+	transition: var(--transition-in);
 	background: var(--yellow);
 	box-shadow: none;
-	transition: var(--transition-in);
 }
 
-@media screen and (min-width: 850px) {
-	.section-btn {
-		display: none;
+@media screen and (max-width: 850px) {
+	.chapter-btn {
+		display: block;
+		width: 10rem;
+		margin: 2rem auto 0 auto;
 	}
 }

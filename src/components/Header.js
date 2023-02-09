@@ -51,14 +51,14 @@ const headerIconsList = [{
 
 // NAV RENDER FUNCTION
 const HeaderNavRender = ({ headerNavText, headerNavHref }) => {
-	return (<li className='header-nav-li'>
+	return (<li>
 		<a href={headerNavHref}>{headerNavText}</a>
 	</li>);
 };
 
 // ICONS RENDER FUNCTION
 const HeaderIconsRender = ({ headerIconHref, headerIconRel, headerIconTarget, iClass }) => {
-	return (<li className='header-icons-li'>
+	return (<li>
 		<a href={headerIconHref} rel={headerIconRel} target={headerIconTarget}><i className={iClass}></i></a>
 	</li>);
 };
@@ -66,28 +66,23 @@ const HeaderIconsRender = ({ headerIconHref, headerIconRel, headerIconTarget, iC
 // STRUCTURE FUNCTION
 export const HeaderStructure = () => {
 	return (<section id='header-section'>
-		<div id='header-container'>
+		<article>
+			<img src={headerLogo} alt="total station logo" />			{/* header logo */}
+			<h2><span>GEOMATICS</span><br />CONSULTING</h2>
 
-			<div id='header-logo-container'>
-				<img id='header-logo' src={headerLogo} alt="total station logo" />		{/* header logo */}
-				<h2 id='header-logo-text'><span>GEOMATICS</span><br />CONSULTING</h2>
-			</div>
-
-			<ul id='header-nav-ul'>		{/* iterate header nav links */}
+			<nav>														{/* iterate over header nav links */}
 				{headerNavList.map((i) => {
 					return (<HeaderNavRender {...i} key={i.id} />)
 				})}
-			</ul>
+			</nav>
 
-			<ul id='header-icons-ul'>		{/* iterate header icons */}
+			<ul>														{/* iterate over header icons */}
 				{headerIconsList.map((i) => {
 					return (<HeaderIconsRender {...i} key={i.id} />)
 				})}
 			</ul>
 
-			<div id='header-menu-minimized-container'>		{/* minimized menu icon */}
-				<i id='header-menu-icon' className="fa-solid fa-bars"></i>
-			</div>
-		</div>
+			<i className="fa-solid fa-bars"></i>						{/* minimized menu icon */}
+		</article>
 	</section>);
 };

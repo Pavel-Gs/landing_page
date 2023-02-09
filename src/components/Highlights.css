@@ -1,47 +1,35 @@
 #highlights-section {
-  scroll-margin-top: var(--scroll-mrg-tp);
   background: var(--creme-light);
-  text-align: center;
-  padding-bottom: var(--section-pdg-bt);
 }
-#highlights-section h2 {
-  font-size: var(--fsize-logos);
-  letter-spacing: var(--spacing-small);
-  color: var(--orange);
-  padding-top: var(--section-pdg-tp);
-}
-#highlights-section #highlights-article {
-  padding: var(--article-pdg);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-  row-gap: 2rem;
+#highlights-section article {
   max-width: var(--page-max-width);
   margin: 0 auto;
-  font-size: var(--fsize-text);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
 }
 @media screen and (max-width: 850px) {
-  #highlights-section #highlights-article {
+  #highlights-section article {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (max-width: 500px) {
-  #highlights-section #highlights-article {
+  #highlights-section article {
     grid-template-columns: 1fr;
   }
 }
-#highlights-section #highlights-article #highlights-container {
+#highlights-section article .highlight-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
   text-align: left;
 }
-#highlights-section #highlights-article #highlights-container i {
-  font-size: 3rem;
-  margin-right: 1rem;
+#highlights-section article .highlight-container i {
   color: var(--orange);
+  font-size: var(--fsize-hero);
+  margin-right: 1rem;
   text-align: center;
 }
-#highlights-section #highlights-article #highlights-container #highlights-text {
+#highlights-section article .highlight-container div {
   color: var(--grey);
+  display: block;
 }/*# sourceMappingURL=Highlights.css.map */
