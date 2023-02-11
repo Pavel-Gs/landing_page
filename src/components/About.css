@@ -2,13 +2,10 @@
   background: var(--creme);
 }
 #about-section article {
-  max-width: var(--page-max-width);
-  padding: var(--article-pdg);
   display: grid;
   grid-template-columns: 1fr 1fr;
   -moz-column-gap: 2rem;
        column-gap: 2rem;
-  margin: 0 auto;
 }
 @media screen and (max-width: 850px) {
   #about-section article {

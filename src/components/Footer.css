@@ -1,0 +1,139 @@
+#footer-section {
+  background: var(--brown);
+}
+#footer-section article button {
+  color: var(--creme);
+  background: var(--orange);
+  letter-spacing: var(--spacing-small);
+  padding: var(--btn-pdg);
+  transition: var(--transition-out);
+  box-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+#footer-section article button:hover {
+  transition: var(--transition-in);
+  background: var(--yellow);
+  box-shadow: none;
+}
+#footer-section article button i {
+  padding-right: 0.125rem;
+}
+#footer-section article p {
+  color: var(--creme);
+}
+#footer-section article ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer-section article ul li {
+  font-size: var(--fsize-logos);
+  text-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.5);
+  margin: 0 0.5rem;
+}
+#footer-section article ul li a {
+  color: var(--orange);
+  transition: var(--transition-out);
+}
+#footer-section article ul li a:hover {
+  color: var(--yellow);
+  transition: var(--transition-in);
+}
+#footer-section #contact-form-container {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  top: 110%;
+  left: 50%;
+  margin-left: -250px;
+  box-shadow: 0 0 0.25rem 0.125rem rgba(0, 0, 0, 0.6);
+  background: var(--creme-light);
+}
+@media screen and (max-width: 550px) {
+  #footer-section #contact-form-container {
+    width: 300px;
+    height: 520px;
+    margin-left: -150px;
+  }
+}
+@media screen and (max-height: 850px) {
+  #footer-section #contact-form-container {
+    height: 450px;
+    padding-top: 1.75rem;
+  }
+}
+@media screen and (max-height: 550px) {
+  #footer-section #contact-form-container {
+    height: 270px;
+  }
+}
+#footer-section #contact-form-container .fa-xmark {
+  color: var(--grey);
+  font-size: var(--fsize-logos);
+  position: absolute;
+  right: 0.25rem;
+  top: 0;
+}
+@media screen and (max-height: 550px) {
+  #footer-section #contact-form-container .fa-xmark {
+    font-size: 1rem;
+  }
+}
+#footer-section #contact-form-container .fa-xmark:hover {
+  cursor: pointer;
+}
+#footer-section #contact-form-container form h4 {
+  color: var(--grey);
+  margin: 1.25rem 0;
+}
+@media screen and (max-height: 850px) {
+  #footer-section #contact-form-container form h4 {
+    display: none;
+  }
+}
+#footer-section #contact-form-container form input {
+  width: 90%;
+  height: 1.5rem;
+  padding: 0.75rem 0.5rem;
+  margin: 0.25rem;
+  border: 0.0625rem solid rgba(102, 98, 90, 0.2);
+}
+@media screen and (max-height: 550px) {
+  #footer-section #contact-form-container form input {
+    padding: 0.5rem;
+    margin: 0.0625rem;
+  }
+}
+#footer-section #contact-form-container form p {
+  margin: 1.25rem 0.5rem;
+}
+@media screen and (max-height: 550px) {
+  #footer-section #contact-form-container form p {
+    display: none;
+  }
+}
+#footer-section #contact-form-container form button {
+  color: var(--creme);
+  background: var(--orange);
+  letter-spacing: var(--spacing-small);
+  padding: var(--btn-pdg);
+  box-shadow: var(--btn-shadow);
+  transition: var(--transition-out);
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media screen and (max-height: 550px) {
+  #footer-section #contact-form-container form button {
+    margin-top: 0.75rem;
+  }
+}
+#footer-section #contact-form-container form button:hover {
+  transition: var(--transition-in);
+  background: var(--yellow);
+  box-shadow: none;
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,9 +1,19 @@
-/* CSS VARIABLES (sass variables are in corresponding files)*/
+/* (sass variables are in corresponding files)
+$break-1: 1000px;
+$break-2: 850px;
+$break-3: 550px;
+$break-4: 350px;
+$break-5: 850px; //vertical
+$break-6: 550px; //vertical
+*/
+
+/* CSS VARIABLES */
 :root {
 	/* colors */
 	--brown: #634811;
 	--creme: #FCEAC5;
-	--creme-light: #fceac590;
+	--creme-light: #fdf3de;
+	--creme-light-transparent: #fceac590;
 	--yellow: #E3A427;
 	--grey: #66625A;
 	--orange: #B3811E;
@@ -46,10 +56,16 @@ li {
 	list-style: none;
 }
 
+/* SECTION */
 .chapter {
 	scroll-margin-top: var(--scroll-mrg-tp);
 	padding: var(--section-pdg);
 	text-align: center;
+}
+
+.chapter article {
+	max-width: var(--page-max-width);
+	margin: 0 auto;
 }
 
 .chapter h2 {
@@ -59,10 +75,10 @@ li {
 	color: var(--orange);
 }
 
+/* SECTION BUTTON */
 .chapter-btn {
 	color: var(--creme);
 	background: var(--orange);
-	font-size: var(--fsize-text);
 	letter-spacing: var(--spacing-small);
 	padding: var(--btn-pdg);
 	box-shadow: var(--btn-shadow);

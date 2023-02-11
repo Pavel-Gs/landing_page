@@ -1,19 +1,21 @@
 // SASS VARIABLES //
-$break-1: 850px;
+$break-1: 1000px;
+$break-2: 850px;
+$break-3: 550px;
+$break-4: 350px;
+$break-5: 850px; //vertical
+$break-6: 550px; //vertical
 
 // // ABOUT STYLES // //
 #about-section {
 	background: var(--creme);
 
 	article {
-		max-width: var(--page-max-width);
-		padding: var(--article-pdg);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		column-gap: 2rem;
-		margin: 0 auto;
 
-		@media screen and (max-width: $break-1) {
+		@media screen and (max-width: $break-2) {
 			grid-template-columns: 1fr;
 		}
 
@@ -21,7 +23,7 @@ $break-1: 850px;
 			box-shadow: 0.4375rem 0.5625rem 0.25rem var(--brown);
 			background: linear-gradient(rgba(99, 72, 17, 0.15), rgba(0, 0, 0, 0.3)), url('../images/about.jpg') center/cover no-repeat;
 
-			@media screen and (max-width: $break-1) {
+			@media screen and (max-width: $break-2) {
 				height: 30vh;
 				margin-bottom: 2rem;
 			}

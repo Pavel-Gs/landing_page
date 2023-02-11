@@ -48,17 +48,6 @@ const highlightsList = [{
 	id: crypto.randomUUID(),
 }];
 
-// HIGHLIGHTS RENDER FUNCTION
-const HighlightsRender = ({ iClass, h4Heading, pText }) => {
-	return (<div className='highlight-container'>
-		<i className={iClass}></i>
-		<div>
-			<h4>{h4Heading}</h4>
-			<p>{pText}</p>
-		</div>
-	</div>);
-};
-
 // HIGHLIGHTS STRUCTURE FUNCTION
 export const HighlightsStructure = () => {
 	return (<section className='chapter' id='highlights-section'>
@@ -70,4 +59,15 @@ export const HighlightsStructure = () => {
 		</article>
 		<a className='chapter-btn' href='#projects-section'>PROJECTS</a>
 	</section>);
+};
+
+// HIGHLIGHTS RENDER FUNCTION
+const HighlightsRender = ({ iClass, h4Heading, pText }) => {
+	return (<div className='highlight-container'>
+		<i className={iClass}></i>
+		<div>
+			<h4>{h4Heading}</h4>
+			<p>{pText}</p>
+		</div>
+	</div>);
 };

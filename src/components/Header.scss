@@ -1,15 +1,24 @@
 // SASS VARIABLES //
-$break-1: 850px;
+$break-1: 1000px;
+$break-2: 850px;
+$break-3: 550px;
+$break-4: 350px;
+$break-5: 850px; //vertical
+$break-6: 550px; //vertical
 
 // // HEADER STYLES // //
 #header-section {
 	background: var(--creme);
-	box-shadow: 0 0.25rem 0.25rem var(--grey);
-	padding: 2rem 2rem;
+	box-shadow: 0 0 0.25rem 0.25rem rgba(0, 0, 0, 0.6);
+	padding: 2rem;
 	position: fixed;
 	z-index: 1;
 	top: 0;
 	width: 100%;
+
+	@media screen and (max-width: $break-4), (max-height: $break-5) {
+		padding: 0.5rem 2rem;
+	}
 
 	article {
 		max-width: var(--page-max-width);
@@ -24,12 +33,16 @@ $break-1: 850px;
 			top: 0.375rem;
 			height: 4.75rem;
 			transform: translateX(4.625rem);
+
+			@media screen and (max-width: $break-4), (max-height: $break-5) {
+				display: none;
+			}
 		}
 
 		h2 {
 			color: var(--yellow);
-			font-size: var(--fsize-logos);
 			text-shadow: 0 0.125rem 0.125rem var(--grey);
+			font-size: 1.625rem;
 			position: relative;
 			text-align: center;
 			font-weight: bold;
@@ -39,19 +52,27 @@ $break-1: 850px;
 				text-shadow: 0 0.125rem 0.125rem var(--grey);
 				position: relative;
 			}
+
+			@media screen and (max-width: $break-4), (max-height: $break-6) {
+				display: none;
+			}
 		}
 
 		// header links container //
 		nav {
 			display: flex;
 
-			@media screen and (max-width: $break-1) {
+			@media screen and (max-width: $break-2) {
 				display: none;
+			}
+			
+			@media screen and (max-height: $break-6) and (max-width: $break-1) {
+				margin: 0 auto;
 			}
 
 			li {
 				letter-spacing: var(--spacing-small);
-				margin-right: 1rem;
+				margin-left: 1rem;
 				font-weight: bold;
 
 				a {
@@ -78,7 +99,7 @@ $break-1: 850px;
 			li {
 				font-size: var(--fsize-logos);
 				text-shadow: 0.0625rem 0.0625rem 0.0625rem var(--grey);
-				margin-left: 1.125rem;
+				margin-left: 1.25rem;
 
 				a {
 					color: var(--orange);
@@ -92,10 +113,10 @@ $break-1: 850px;
 			}
 		}
 
-		// minimized menu container //
-		.fa-bars {
+		// minimized menu icon //
+		.fa-list-ul {
 			color: var(--brown);
-			text-shadow: var(--btn-shadow);
+			text-shadow: 0.0625rem 0.0625rem 0.125rem var(--grey);
 			transition: var(--transition-out);
 			font-size: 2rem;
 			display: none;
@@ -105,8 +126,57 @@ $break-1: 850px;
 				transition: var(--transition-in);
 			}
 
-			@media screen and (max-width: $break-1) {
+			@media screen and (max-width: $break-2) {
 				display: block;
+			}
+
+			@media screen and (max-width: $break-4), (max-height: $break-6) {
+				font-size: 1rem;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	// // MINIMIZED MENU CONTAINER // //
+	#minimized-menu-container {
+		position: fixed;
+		top: 0.125rem;
+		right: -110%; //hidden to the right
+		padding: 2rem 1rem;
+		box-shadow: 0 0 0.25rem 0.125rem rgba(0, 0, 0, 0.6);
+		background: var(--creme-light);
+
+		.fa-xmark {
+			color: var(--grey);
+			position: absolute;
+			top: 0;
+			left: 0.25rem;
+			font-size: var(--fsize-logos);
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		nav {	
+			li {
+				letter-spacing: var(--spacing-small);
+				text-align: right;
+				font-weight: bold;
+				padding: 1rem;
+
+				a {
+					color: var(--grey);
+					transition: var(--transition-out);
+					text-decoration: none;
+					text-transform: uppercase;
+					margin-right: 1rem;
+
+					&:hover {
+						color: var(--orange);
+						transition: var(--transition-in);
+					}
+				}
 			}
 		}
 	}

@@ -5,6 +5,7 @@ import './components/Hero.css';
 import './components/About.css';
 import './components/Highlights.css';
 import './components/Projects.css';
+import './components/Footer.css';
 
 // IMPORT ALL COMPONENTS
 import { HeaderStructure } from './components/Header.js';
@@ -12,6 +13,7 @@ import { HeroStructure } from './components/Hero.js';
 import { AboutStructure } from './components/About.js';
 import { HighlightsStructure } from './components/Highlights.js';
 import { ProjectsStructure } from './components/Projects.js';
+import { FooterStructure } from './components/Footer.js';
 
 // RETURN ALL COMPONENTS
 function App() {
@@ -21,6 +23,7 @@ function App() {
 		<AboutStructure />
 		<HighlightsStructure />
 		<ProjectsStructure />
+		<FooterStructure />
 	</>);
 }
 

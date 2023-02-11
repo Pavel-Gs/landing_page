@@ -1,41 +1,42 @@
-// SASS VARIABLES
-$break-1: 850px;
-$break-2: 500px;
+// SASS VARIABLES //
+$break-1: 1000px;
+$break-2: 850px;
+$break-3: 550px;
+$break-4: 350px;
+$break-5: 850px; //vertical
+$break-6: 550px; //vertical
 
 // // HIGHLIGHTS STYLES // //
 #highlights-section {
 	background: var(--creme-light);
 
 	article {
-		max-width: var(--page-max-width);
-		margin: 0 auto;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 2rem;
 
-		@media screen and (max-width: $break-1) {
+		@media screen and (max-width: $break-2) {
 			grid-template-columns: 1fr 1fr;
 		}
 
-		@media screen and (max-width: $break-2) {
+		@media screen and (max-width: $break-3) {
 			grid-template-columns: 1fr;
 		}
 
 		.highlight-container {
 			display: grid;
-			grid-template-columns: 1fr 4fr;
-			text-align: left;
+			grid-template-columns: var(--fsize-logos) auto;
+			gap: 1rem;
 
 			i {
-				color: var(--orange);
-				font-size: var(--fsize-hero);
-				margin-right: 1rem;
-				text-align: center;
+				color: var(--grey);
+				font-size: var(--fsize-logos);
 			}
 
 			div {
 				color: var(--grey);
 				display: block;
+				text-align: left;
 			}
 		}
 	}

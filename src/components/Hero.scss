@@ -1,9 +1,13 @@
-// SASS VARIABLES
-$break-2: 500px;
+// SASS VARIABLES //
+$break-1: 1000px;
+$break-2: 850px;
+$break-3: 550px;
+$break-4: 350px;
+$break-5: 850px; //vertical
+$break-6: 550px; //vertical
 
 // // HERO STYLES // //
 #hero-section {
-	padding: var(--section-pdg);
 	background: linear-gradient(rgba(99, 72, 17, 0.65), rgba(0, 0, 0, 0.65)), url('../images/hero.jpg') center/cover no-repeat;
 	min-height: 100vh;
 	display: flex;
@@ -11,22 +15,21 @@ $break-2: 500px;
 	justify-content: center;
 
 	article {
-		max-width: var(--page-max-width);
-		letter-spacing: var(--spacing-big);
-		color: var(--creme);
-		text-align: center;
+		letter-spacing: var(--spacing-big);	
 		word-spacing: 0.25rem;
 
 		h1 {
 			font-size: var(--fsize-hero);
+			color: var(--creme);
 
-			@media screen and (max-width: $break-2) {
+			@media screen and (max-width: $break-3) {
 				font-size: var(--fsize-logos);
 				letter-spacing: var(--spacing-small);
 			}
 		}
 
 		p {
+			color: var(--creme);
 			margin: 1rem 0 2rem 0;
 		}
 
@@ -36,12 +39,12 @@ $break-2: 500px;
 			font-size: var(--fsize-logos);
 			letter-spacing: var(--spacing-small);
 			padding: var(--btn-pdg);
-			box-shadow: var(--btn-shadow);
+			box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.9);
 			transition: var(--transition-out);
 			text-decoration: none;
 			border: 2px solid transparent;
 			cursor: pointer;
-			
+
 			&:hover {
 				color: var(--creme);
 				border: 2px solid var(--creme);

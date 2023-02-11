@@ -1,5 +1,3 @@
-// // PROJECTS COMPONENT // //
-
 //IMPORT IMAGES
 import ruralImg from '../images/rural_surveys.jpg';
 import topoImg from '../images/topographic_surveys.jpg';
@@ -11,6 +9,8 @@ import residentialImg from '../images/residential_surveys.jpg';
 import cadastreImg from '../images/cadastre_surveys.jpg';
 import layoutsImg from '../images/layouts.jpg';
 import asbuiltImg from '../images/asbuilt_surveys.jpg';
+
+// // PROJECTS COMPONENT // //
 
 // PROJECTS LIST
 const projectsList = [{
@@ -51,7 +51,7 @@ const projectsList = [{
 }, {
 	projectImg: cadastreImg,
 	h4Text: "cadastre surveys*",
-	pText: "Surveying property lines. The fence is in the right place, isn't it?",
+	pText: "Surveying property lines*. The fence is in the right place, isn't it?",
 	id: crypto.randomUUID(),
 }, {
 	projectImg: layoutsImg,
@@ -65,15 +65,6 @@ const projectsList = [{
 	id: crypto.randomUUID(),
 },];
 
-// PROJECTS RENDER FUNCTION
-const ProjectsRender = ({ projectImg, h4Text, pText }) => {
-	return (<div>
-		<img src={projectImg} alt={h4Text} />
-		<h4 className='project-h4'>{h4Text}</h4>
-		<p>{pText}</p>
-	</div>);
-};
-
 // PROJECTS STRUCTURE FUNCTION
 export const ProjectsStructure = () => {
 	return (<section className='chapter' id='projects-section'>
@@ -85,4 +76,13 @@ export const ProjectsStructure = () => {
 			})}
 		</article>
 	</section>);
+};
+
+// PROJECTS RENDER FUNCTION
+const ProjectsRender = ({ projectImg, h4Text, pText }) => {
+	return (<div>
+		<img src={projectImg} alt={h4Text} />
+		<h4 className='project-h4'>{h4Text}</h4>
+		<p>{pText}</p>
+	</div>);
 };
