@@ -1,7 +1,7 @@
 # My web development portfolio site
 
 More projects are on the way.  
-Commercial use in land surveying industry is not intended.  
+Commercial use in the land surveying industry is not intended.  
 
 [My LinkedIn profile](https://www.linkedin.com/in/pavel-generalov).  
 

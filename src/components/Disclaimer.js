@@ -20,7 +20,7 @@ export const DisclaimerStructure = () => {
 	return (<section id='disclaimer-section' style={visibility}>		{/* visibility styles applies here */}
 		<p>This is my web-development portfolio site.<br />
 			More projects are on the way.</p>
-		<p>Commercial use in land surveying industry<br />
+		<p>Commercial use in the land surveying industry<br />
 			is not intended.</p>
 		<button className='btn-regular' onClick={() => {transparentDisclaimer(); setTimeout(hideDisclaimer, 600); }}>DISMISS</button> {/* Invoke transparency function first. After the animation - invoke "display: none" function */}
 	</section>);
