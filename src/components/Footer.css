@@ -1,25 +1,7 @@
 #footer-section {
   background: var(--brown);
 }
-#footer-section article button {
-  color: var(--creme);
-  background: var(--orange);
-  letter-spacing: var(--spacing-small);
-  padding: var(--btn-pdg);
-  transition: var(--transition-out);
-  box-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.5);
-  border: none;
-  font-size: 1rem;
-  text-decoration: none;
-  cursor: pointer;
-  position: relative;
-}
-#footer-section article button:hover {
-  transition: var(--transition-in);
-  background: var(--yellow);
-  box-shadow: none;
-}
-#footer-section article button i {
+#footer-section article .btn-regular i {
   padding-right: 0.125rem;
 }
 #footer-section article p {
@@ -36,22 +18,28 @@
   margin: 0 0.5rem;
 }
 #footer-section article ul li a {
-  color: var(--orange);
   transition: var(--transition-out);
+  color: var(--orange);
 }
-#footer-section article ul li a:hover {
-  color: var(--yellow);
+#footer-section article ul li a:active {
   transition: var(--transition-in);
+  color: var(--yellow);
+}
+@media (hover: hover) {
+  #footer-section article ul li a:hover {
+    transition: var(--transition-in);
+    color: var(--yellow);
+  }
 }
 #footer-section #contact-form-container {
+  background: var(--creme-light);
   position: fixed;
-  width: 500px;
-  height: 500px;
   top: 110%;
   left: 50%;
   margin-left: -250px;
+  width: 500px;
+  height: 500px;
   box-shadow: 0 0 0.25rem 0.125rem rgba(0, 0, 0, 0.6);
-  background: var(--creme-light);
 }
 @media screen and (max-width: 550px) {
   #footer-section #contact-form-container {
@@ -78,13 +66,13 @@
   right: 0.25rem;
   top: 0;
 }
-@media screen and (max-height: 550px) {
-  #footer-section #contact-form-container .fa-xmark {
-    font-size: 1rem;
-  }
-}
-#footer-section #contact-form-container .fa-xmark:hover {
+#footer-section #contact-form-container .fa-xmark:active {
   cursor: pointer;
+}
+@media (hover: hover) {
+  #footer-section #contact-form-container .fa-xmark:hover {
+    cursor: pointer;
+  }
 }
 #footer-section #contact-form-container form h4 {
   color: var(--grey);
@@ -116,24 +104,11 @@
     display: none;
   }
 }
-#footer-section #contact-form-container form button {
-  color: var(--creme);
-  background: var(--orange);
-  letter-spacing: var(--spacing-small);
-  padding: var(--btn-pdg);
-  box-shadow: var(--btn-shadow);
-  transition: var(--transition-out);
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
+#footer-section #contact-form-container form .btn-regular {
+  font-size: 0.8125rem;
 }
 @media screen and (max-height: 550px) {
-  #footer-section #contact-form-container form button {
+  #footer-section #contact-form-container form .btn-regular {
     margin-top: 0.75rem;
   }
-}
-#footer-section #contact-form-container form button:hover {
-  transition: var(--transition-in);
-  background: var(--yellow);
-  box-shadow: none;
 }/*# sourceMappingURL=Footer.css.map */

@@ -15,6 +15,6 @@ export const AboutStructure = () => {
 				</p>
 			</div>
 		</article>
-		<a className='chapter-btn' href='#highlights-section'>HIGHLIGHTS</a>
+		<a className='btn-chapter-jump' href='#highlights-section'>HIGHLIGHTS</a>
 	</section>);
 };

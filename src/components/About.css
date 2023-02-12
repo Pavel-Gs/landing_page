@@ -18,8 +18,13 @@
 }
 @media screen and (max-width: 850px) {
   #about-section article #about-img-container {
-    height: 30vh;
+    min-height: 30vh;
     margin-bottom: 2rem;
+  }
+}
+@media screen and (max-height: 850px) {
+  #about-section article #about-img-container {
+    min-height: 50vh;
   }
 }
 #about-section article #about-txt-container {

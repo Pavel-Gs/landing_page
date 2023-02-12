@@ -1,0 +1,25 @@
+// SASS VARIABLES //
+$break-1: 1000px;
+$break-2: 850px;
+$break-3: 550px;
+$break-4: 350px;
+$break-5: 850px; //vertical
+$break-6: 550px; //vertical
+
+// // DISCLAIMER STYLES // //
+#disclaimer-section {
+    background: var(--brown);
+    text-align: center;
+    position: fixed;
+    top: 49%; // "49%" to hide the hero's text behind this window
+    left: 50%; // horizontally centered
+    margin-left: -181px; // negative half of width
+    width: 362px; // "362px" to hide the hero's text behind this window
+    padding: 1rem;
+    box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.5);
+
+    p {
+        color: var(--creme);
+        padding-bottom: 1rem;
+    }
+}

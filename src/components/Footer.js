@@ -10,18 +10,18 @@ import { headerIconsList } from './Header.js';
 export const FooterStructure = () => {
 	const [animation, setAnimation] = useState();
 	const [visibility, setVisibility] = useState();
-	const handleRollUp = () => {																	// handle the form's roll UP animation and HIDE the button
-		setAnimation({ transform: 'translateY(-120%)', transition: '0.5s ease-in', });
-		setVisibility({ zIndex: '-1', });															// eliminates the shift in the footer's height when the button is hidden (this is an alternative to "display: none")
+	const handleRollUp = () => {														// handle the form's roll UP animation and HIDE the button
+		setAnimation({ transform: 'translateY(-120%)', transition: '0.5s ease-in', });	// "-120%" keeps the form more or less at the bottom at all times
+		setVisibility({ opacity: '0', });												// eliminates the shift in the footer's height when the button is hidden (this is an alternative to "display: none")
 	};
-	const handleRollDown = () => {																	// handle the form's roll DOWN animation and SHOW the button
+	const handleRollDown = () => {														// handle the form's roll DOWN animation and SHOW the button
 		setAnimation({ transition: '0.5s ease-out', });
-		setVisibility({ zIndex: '0', });
+		setVisibility({ opacity: '1', });
 	};
 
 	return (<section className='chapter' id='footer-section'>
 		<article>
-			<button onClick={handleRollUp} style={visibility}>										{/* invoke the form's roll UP function */} {/* the visibility style applies here */}
+			<button onClick={handleRollUp} style={visibility} className='btn-regular'>				{/* invoke the form's roll UP function */} {/* the visibility style applies here */}
 				<i className="fa-solid fa-arrow-up-right-from-square"></i>
 				CONTACT FORM
 			</button><br /><br />
@@ -50,7 +50,7 @@ export const FooterStructure = () => {
 				<input type='text' name='request' placeholder="Work request" required />			{/*client's work order*/}
 				<input type='text' name='comments' placeholder="Additional comments, if any..." />	{/*client's comments*/}
 				<p>*cadastre work (when property lines are involved) is done through a partnering land surveying company, on their terms and conditions</p>
-				<button type='submit'>SEND</button>
+				<button type='submit' className='btn-regular'>SEND</button>
 
 				{/* HIDDEN VALUES */}
 

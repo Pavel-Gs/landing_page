@@ -15,6 +15,7 @@ $break-6: 550px; //vertical
 	--creme-light: #fdf3de;
 	--creme-light-transparent: #fceac590;
 	--yellow: #E3A427;
+	--yellow-light: #f4b330;
 	--grey: #66625A;
 	--orange: #B3811E;
 	/* font size */
@@ -63,6 +64,13 @@ li {
 	text-align: center;
 }
 
+@media screen and (max-width: 350px),
+(max-height: 850px) {
+	.chapter {
+		scroll-margin-top: 2.5rem;
+	}
+}
+
 .chapter article {
 	max-width: var(--page-max-width);
 	margin: 0 auto;
@@ -76,28 +84,64 @@ li {
 }
 
 /* SECTION BUTTON */
-.chapter-btn {
+.btn-chapter-jump {
+	transition: var(--transition-out);
 	color: var(--creme);
 	background: var(--orange);
-	letter-spacing: var(--spacing-small);
-	padding: var(--btn-pdg);
 	box-shadow: var(--btn-shadow);
-	transition: var(--transition-out);
+	padding: var(--btn-pdg);
+	letter-spacing: var(--spacing-small);
 	text-decoration: none;
 	cursor: pointer;
 	display: none;
 }
 
-.chapter-btn:hover {
+.btn-chapter-jump:active {
 	transition: var(--transition-in);
 	background: var(--yellow);
 	box-shadow: none;
 }
 
+@media (hover: hover) {
+	.btn-chapter-jump:hover {
+		transition: var(--transition-in);
+		background: var(--yellow);
+		box-shadow: none;
+	}
+}
+
 @media screen and (max-width: 850px) {
-	.chapter-btn {
+	.btn-chapter-jump {
 		display: block;
-		width: 10rem;
 		margin: 2rem auto 0 auto;
+		width: 10rem;
+	}
+}
+
+/* REGULAR BUTTON */
+.btn-regular {
+	transition: var(--transition-out);
+	color: var(--creme);
+	background: var(--orange);
+	padding: var(--btn-pdg);
+	letter-spacing: var(--spacing-small);
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+	font-size: 1rem;
+	box-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-regular:active {
+	transition: var(--transition-in);
+	background: var(--yellow);
+	box-shadow: none;
+}
+
+@media (hover: hover) {
+	.btn-regular:hover {
+		transition: var(--transition-in);
+		background: var(--yellow);
+		box-shadow: none;
 	}
 }

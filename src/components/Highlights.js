@@ -57,7 +57,7 @@ export const HighlightsStructure = () => {
 				return (<HighlightsRender {...i} key={i.id} />);
 			})}
 		</article>
-		<a className='chapter-btn' href='#projects-section'>PROJECTS</a>
+		<a className='btn-chapter-jump' href='#projects-section'>PROJECTS</a>
 	</section>);
 };
 

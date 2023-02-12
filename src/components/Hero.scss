@@ -8,14 +8,14 @@ $break-6: 550px; //vertical
 
 // // HERO STYLES // //
 #hero-section {
-	background: linear-gradient(rgba(99, 72, 17, 0.65), rgba(0, 0, 0, 0.65)), url('../images/hero.jpg') center/cover no-repeat;
-	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background: linear-gradient(rgba(99, 72, 17, 0.65), rgba(0, 0, 0, 0.65)), url('../images/hero.jpg') center/cover no-repeat;
+	min-height: 100vh;
 
 	article {
-		letter-spacing: var(--spacing-big);	
+		letter-spacing: var(--spacing-big);
 		word-spacing: 0.25rem;
 
 		h1 {
@@ -34,23 +34,33 @@ $break-6: 550px; //vertical
 		}
 
 		a {
+			transition: var(--transition-out);
 			color: var(--orange);
 			background: var(--creme);
 			font-size: var(--fsize-logos);
 			letter-spacing: var(--spacing-small);
 			padding: var(--btn-pdg);
-			box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.9);
-			transition: var(--transition-out);
 			text-decoration: none;
 			border: 2px solid transparent;
 			cursor: pointer;
+			box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.9);
 
-			&:hover {
+			&:active {
+				transition: var(--transition-in);
 				color: var(--creme);
 				border: 2px solid var(--creme);
-				transition: var(--transition-in);
 				background: transparent;
 				box-shadow: none;
+			}
+
+			@media (hover: hover) {
+				&:hover {
+					transition: var(--transition-in);
+					color: var(--creme);
+					border: 2px solid var(--creme);
+					background: transparent;
+					box-shadow: none;
+				}
 			}
 		}
 	}

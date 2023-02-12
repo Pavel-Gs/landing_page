@@ -11,25 +11,7 @@ $break-6: 550px; //vertical
 	background: var(--brown);
 
 	article {
-		button {
-			color: var(--creme);
-			background: var(--orange);
-			letter-spacing: var(--spacing-small);
-			padding: var(--btn-pdg);
-			transition: var(--transition-out);
-			box-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.5);
-			border: none;
-			font-size: 1rem;
-			text-decoration: none;
-			cursor: pointer;
-			position: relative; //Eliminates the shift in the footer's height when the button is hidden (this is an alternative to "display: none"). Handled in jsx with z-index.
-
-			&:hover {
-				transition: var(--transition-in);
-				background: var(--yellow);
-				box-shadow: none;
-			}
-
+		.btn-regular {
 			i {
 				padding-right: 0.125rem;
 			}
@@ -39,7 +21,7 @@ $break-6: 550px; //vertical
 			color: var(--creme);
 		}
 
-		// header icons container (almost the same as in the header //
+		// header/footer icons container (almost the same as in the header //
 		ul {
 			display: flex;
 			align-items: center;
@@ -51,12 +33,19 @@ $break-6: 550px; //vertical
 				margin: 0 0.5rem;
 
 				a {
-					color: var(--orange);
 					transition: var(--transition-out);
+					color: var(--orange);
 
-					&:hover {
-						color: var(--yellow);
+					&:active {
 						transition: var(--transition-in);
+						color: var(--yellow);
+					}
+
+					@media (hover: hover) {
+						&:hover {
+							transition: var(--transition-in);
+							color: var(--yellow);
+						}
 					}
 				}
 			}
@@ -65,14 +54,14 @@ $break-6: 550px; //vertical
 
 	// // CONTACT FORM STYLES // //
 	#contact-form-container {
+		background: var(--creme-light);
 		position: fixed;
-		width: 500px;
-		height: 500px;
 		top: 110%; //hidden below the screen
 		left: 50%; //horizontally centered
 		margin-left: -250px; //negative half of width
+		width: 500px;
+		height: 500px;
 		box-shadow: 0 0 0.25rem 0.125rem rgba(0, 0, 0, 0.6);
-		background: var(--creme-light);
 
 		@media screen and (max-width: $break-3) {
 			width: 300px;
@@ -84,6 +73,7 @@ $break-6: 550px; //vertical
 			height: 450px;
 			padding-top: 1.75rem;
 		}
+
 		@media screen and (max-height: $break-6) {
 			height: 270px;
 		}
@@ -95,12 +85,14 @@ $break-6: 550px; //vertical
 			right: 0.25rem;
 			top: 0;
 
-			@media screen and (max-height: $break-6) {
-				font-size: 1rem;
+			&:active {
+				cursor: pointer;
 			}
 
-			&:hover {
-				cursor: pointer;
+			@media (hover: hover) {
+				&:hover {
+					cursor: pointer;
+				}
 			}
 		}
 
@@ -135,25 +127,11 @@ $break-6: 550px; //vertical
 				}
 			}
 
-			button {
-				color: var(--creme);
-				background: var(--orange);
-				letter-spacing: var(--spacing-small);
-				padding: var(--btn-pdg);
-				box-shadow: var(--btn-shadow);
-				transition: var(--transition-out);
-				border: none;
-				text-decoration: none;
-				cursor: pointer;
+			.btn-regular {
+				font-size: 0.8125rem;
 
 				@media screen and (max-height: $break-6) {
 					margin-top: 0.75rem;
-				}
-
-				&:hover {
-					transition: var(--transition-in);
-					background: var(--yellow);
-					box-shadow: none;
 				}
 			}
 		}

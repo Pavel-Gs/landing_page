@@ -10,22 +10,23 @@ $break-6: 550px; //vertical
 #header-section {
 	background: var(--creme);
 	box-shadow: 0 0 0.25rem 0.25rem rgba(0, 0, 0, 0.6);
-	padding: 2rem;
 	position: fixed;
 	z-index: 1;
 	top: 0;
 	width: 100%;
+	padding: 2rem;
 
-	@media screen and (max-width: $break-4), (max-height: $break-5) {
-		padding: 0.5rem 2rem;
+	@media screen and (max-width: $break-4),
+	(max-height: $break-5) {
+		padding: 0.75rem 2rem;
 	}
 
 	article {
 		max-width: var(--page-max-width);
-		margin: 0 auto;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin: 0 auto;
 
 		// header logo //	
 		img {
@@ -34,27 +35,45 @@ $break-6: 550px; //vertical
 			height: 4.75rem;
 			transform: translateX(4.625rem);
 
-			@media screen and (max-width: $break-4), (max-height: $break-5) {
+			@media screen and (max-width: $break-4),
+			(max-height: $break-5) {
 				display: none;
 			}
 		}
 
 		h2 {
-			color: var(--yellow);
+			font-size: var(--fsize-logos);
 			text-shadow: 0 0.125rem 0.125rem var(--grey);
-			font-size: 1.625rem;
 			position: relative;
 			text-align: center;
 			font-weight: bold;
 			line-height: 0.7;
 
-			span {
-				text-shadow: 0 0.125rem 0.125rem var(--grey);
-				position: relative;
+			a {
+				transition: var(--transition-out);
+				color: var(--yellow);
+				text-decoration: none;
+
+				span {
+					text-shadow: 0 0.125rem 0.125rem var(--grey);
+					position: relative;
+				}
+
+				&:active {
+					transition: var(--transition-in);
+					color: var(--yellow-light);
+				}
+				
+				@media (hover: hover) {
+					&:hover {
+						transition: var(--transition-in);
+						color: var(--yellow-light);
+					}
+				}
 			}
 
-			@media screen and (max-width: $break-4), (max-height: $break-6) {
-				display: none;
+			@media screen and (max-width: $break-3) and (max-height: $break-6) {
+				font-size: 1.0625rem;
 			}
 		}
 
@@ -65,24 +84,32 @@ $break-6: 550px; //vertical
 			@media screen and (max-width: $break-2) {
 				display: none;
 			}
-			
-			@media screen and (max-height: $break-6) and (max-width: $break-1) {
-				margin: 0 auto;
-			}
 
 			li {
 				letter-spacing: var(--spacing-small);
-				margin-left: 1rem;
 				font-weight: bold;
+				margin-right: 1rem; // the "right" margin makes it look more centered
+
+				@media screen and (max-width: $break-1) {
+					margin-right: 0; // when the nav-links are all the way to the right
+					margin-left: 1rem;
+				}
 
 				a {
-					color: var(--grey);
 					transition: var(--transition-out);
+					color: var(--grey);
 					text-decoration: none;
 
-					&:hover {
-						color: var(--orange);
+					&:active {
 						transition: var(--transition-in);
+						color: var(--orange);
+					}
+
+					@media (hover: hover) {
+						&:hover {
+							transition: var(--transition-in);
+							color: var(--orange);
+						}
 					}
 				}
 			}
@@ -102,12 +129,19 @@ $break-6: 550px; //vertical
 				margin-left: 1.25rem;
 
 				a {
-					color: var(--orange);
 					transition: var(--transition-out);
+					color: var(--orange);
 
-					&:hover {
-						color: var(--yellow);
+					&:active {
 						transition: var(--transition-in);
+						color: var(--yellow);
+					}
+
+					@media (hover: hover) {
+						&:hover {
+							transition: var(--transition-in);
+							color: var(--yellow);
+						}
 					}
 				}
 			}
@@ -115,50 +149,63 @@ $break-6: 550px; //vertical
 
 		// minimized menu icon //
 		.fa-list-ul {
+			transition: var(--transition-out);
 			color: var(--brown);
 			text-shadow: 0.0625rem 0.0625rem 0.125rem var(--grey);
-			transition: var(--transition-out);
-			font-size: 2rem;
 			display: none;
+			font-size: 2rem;
 
-			&:hover {
-				color: var(--yellow);
+			&:active {
 				transition: var(--transition-in);
+				color: var(--yellow);
+			}
+
+			@media (hover: hover) {
+				&:hover {
+					transition: var(--transition-in);
+					color: var(--yellow);
+				}
 			}
 
 			@media screen and (max-width: $break-2) {
 				display: block;
 			}
 
-			@media screen and (max-width: $break-4), (max-height: $break-6) {
-				font-size: 1rem;
-				margin: 0 auto;
+			@media screen and (max-width: $break-4),
+			(max-height: $break-6) {
+				font-size: 1.5rem;
 			}
 		}
 	}
 
 	// // MINIMIZED MENU CONTAINER // //
 	#minimized-menu-container {
+		background: var(--creme-light);
 		position: fixed;
-		top: 0.125rem;
-		right: -110%; //hidden to the right
+		top: 0.125rem; // "0.125rem" leaves a small gap for the div's shadow
+		right: -110%; // hidden to the right
 		padding: 2rem 1rem;
 		box-shadow: 0 0 0.25rem 0.125rem rgba(0, 0, 0, 0.6);
-		background: var(--creme-light);
 
 		.fa-xmark {
+			font-size: var(--fsize-logos);
 			color: var(--grey);
 			position: absolute;
 			top: 0;
 			left: 0.25rem;
-			font-size: var(--fsize-logos);
 
-			&:hover {
+			&:active {
 				cursor: pointer;
+			}
+
+			@media (hover: hover) {
+				&:hover {
+					cursor: pointer;
+				}
 			}
 		}
 
-		nav {	
+		nav {
 			li {
 				letter-spacing: var(--spacing-small);
 				text-align: right;
@@ -166,15 +213,22 @@ $break-6: 550px; //vertical
 				padding: 1rem;
 
 				a {
-					color: var(--grey);
 					transition: var(--transition-out);
+					color: var(--grey);
 					text-decoration: none;
 					text-transform: uppercase;
 					margin-right: 1rem;
 
-					&:hover {
-						color: var(--orange);
+					&:active {
 						transition: var(--transition-in);
+						color: var(--orange);
+					}
+
+					@media (hover: hover) {
+						&:hover {
+							transition: var(--transition-in);
+							color: var(--orange);
+						}
 					}
 				}
 			}

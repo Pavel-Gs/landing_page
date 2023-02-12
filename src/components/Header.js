@@ -59,38 +59,41 @@ export const headerIconsList = [{
 // HEADER STRUCTURE FUNCTION
 export const HeaderStructure = () => {
 	const [animation, setAnimation] = useState();
-	const handleRollLeft = () => {												// handle the menu's roll LEFT animation
-		setAnimation({ right: '0.0625rem', transition: '0.3s ease-out', });
+	const [visibility, setVisibility] = useState();
+	const handleRollLeft = () => {											// handle the menu's roll LEFT animation and HIDES the menu-icon
+		setAnimation({ right: '0.0625rem', transition: '0.3s ease-out', });	// "0.0625rem" leaves a small gap for the div's shadow
+		setVisibility({ opacity: '0', });									// eliminates the shift in the header's height when the menu-icon is hidden (this is an alternative to "display: none")
 	};
-	const handleRollRight = () => {												// handle the menu's roll RIGHT animation
+	const handleRollRight = () => {											// handle the menu's roll RIGHT animation and SHOWS the menu-icon
 		setAnimation({ transition: '0.3s ease-in', });
+		setVisibility({ opacity: '1', });
 	};
 
 	return (<section id='header-section'>
 		<article>
-			<img src={headerLogo} alt="total station logo" />					{/* header logo */}
-			<h2><span>GEOMATICS</span><br />CONSULTING</h2>
+			<img src={headerLogo} alt="total station logo" />											{/* header logo */}
+			<h2><a href='#hero-section'><span>GEOMATICS</span><br />CONSULTING</a></h2>
 
-			<nav>																{/* iterate over header nav links */}
+			<nav>																						{/* iterate over header nav links */}
 				{headerNavList.map((i) => {
 					return (<HeaderNavRender {...i} key={i.id} />)
 				})}
 			</nav>
 
-			<ul>																{/* iterate over header icons */}
+			<ul>																						{/* iterate over header icons */}
 				{headerIconsList.map((i) => {
 					return (<HeaderIconsRender {...i} key={i.id} />)
 				})}
 			</ul>
 
-			<i onClick={handleRollLeft} className="fa-solid fa-list-ul"></i>	{/* minimized menu icon */} {/* invoke the menu's roll LEFT function */}
+			<i onClick={handleRollLeft} style={visibility} className="fa-solid fa-list-ul"></i>			{/* minimized menu icon */} {/* invoke the menu's roll LEFT function */} {/* the visibility style applies here */}
 		</article>
 
 
 		{/*// // MINIMIZED MENU STRUCTURE // //*/}
-		<div style={animation} id='minimized-menu-container'>					{/* the animation style applies here */}
-			<i onClick={handleRollRight} className="fa-solid fa-xmark"></i>			{/* invoke the menu's roll RIGHT function */}
-			<nav>																{/* iterate over header nav links inside the minimized menu*/}
+		<div style={animation} id='minimized-menu-container'>											{/* the animation style applies here */}
+			<i onClick={handleRollRight} className="fa-solid fa-xmark"></i>								{/* invoke the menu's roll RIGHT function */}
+			<nav>																						{/* iterate over header nav links inside the minimized menu*/}
 				{headerNavList.map((i) => {
 					return (<HeaderNavMinimizedRender {...i} key={i.id} propValue={handleRollRight} />)	// pass "handleRollRight" as propValue
 				})}
@@ -116,7 +119,7 @@ const HeaderIconsRender = ({ headerIconHref, headerIconRel, headerIconTarget, iC
 // MINIMIZED MENU RENDER FUNCTION
 const HeaderNavMinimizedRender = ({ headerNavText, headerNavHref, iClass, propValue }) => {
 	return (<li>
-		<a onClick={propValue} href={headerNavHref}>{headerNavText}</a>	{/* invoke the menu's roll RIGHT function (as passed propValue) */}
+		<a onClick={propValue} href={headerNavHref}>{headerNavText}</a>									{/* invoke the menu's roll RIGHT function (as passed propValue) */}
 		<i className={iClass}></i>
 	</li>);
 };

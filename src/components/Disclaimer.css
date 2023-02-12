@@ -1,0 +1,15 @@
+#disclaimer-section {
+  background: var(--brown);
+  text-align: center;
+  position: fixed;
+  top: 49%;
+  left: 50%;
+  margin-left: -181px;
+  width: 362px;
+  padding: 1rem;
+  box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+#disclaimer-section p {
+  color: var(--creme);
+  padding-bottom: 1rem;
+}/*# sourceMappingURL=Disclaimer.css.map */
