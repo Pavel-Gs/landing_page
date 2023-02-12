@@ -13,3 +13,6 @@ Component iterations, useState, useEffect.
 
 ### `SASS`
 Mostly for nesting.
+
+### `@media`
+Media queries are set for all devices.
