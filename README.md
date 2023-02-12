@@ -2,6 +2,7 @@
 
 More projects are on the way.  
 Commercial use in land surveying industry is not intended.  
+
 [My LinkedIn profile](https://www.linkedin.com/in/pavel-generalov).  
 
 [Published site](https://geomatics-consulting.netlify.app).
