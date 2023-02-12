@@ -7,7 +7,7 @@ import {useState, useEffect} from 'react';
 export const DisclaimerStructure = () => {
 	const [visibility, setVisibility] = useState({ opacity: '0' });		// set the initial opacity to 0
 	useEffect(() => {													// fade-in the disclaimer on component-load after the delay
-		setVisibility({ opacity: '1', transition: '0.5s ease-in 1s' });
+		setVisibility({ opacity: '1', transition: '0.5s ease-in 2s' });
 	}, []);
 
 	const transparentDisclaimer = () => {								// handle the disclaimer's transparency
