@@ -1,6 +1,6 @@
-# My web development portfolio site
+# A company's landing page
 
-More projects are on the way.  
+This is my portfolio project. More apps are on the way.  
 Commercial use in the land surveying industry is not intended.  
 The design idea (mostly - the layout) is taken from the "Backroads app" by John Smilga.
 
