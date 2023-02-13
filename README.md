@@ -2,7 +2,7 @@
 
 More projects are on the way.  
 Commercial use in the land surveying industry is not intended.  
-The design idea (mostly - the layout) is taken from "Backroads app" by John Smilga.
+The design idea (mostly - the layout) is taken from the "Backroads app" by John Smilga.
 
 [My LinkedIn profile](https://www.linkedin.com/in/pavel-generalov).  
 
