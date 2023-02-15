@@ -26,7 +26,7 @@ export const FooterStructure = () => {
 				CONTACT FORM
 			</button><br /><br />
 			<p>*cadastre work (when property lines are involved) is done through a partnering land surveying company, on their terms and conditions</p><br />
-			<p>Pavel Generalov. Tel: (123) 456-7890. Email: pavel@generalov.ca. Serving Metro Vancouver and Lower Mainland</p><br />
+			<p>Pavel Generalov. Tel: (123) 456-7890. Email: john@smith.bc. Serving Metro Vancouver and Lower Mainland</p><br />
 
 			<ul>																					{/* iterate over footer icons (copied from the header) */}
 				{headerIconsList.map((i) => {
@@ -54,8 +54,8 @@ export const FooterStructure = () => {
 
 				{/* HIDDEN VALUES */}
 
-				{/*cc automated response to other emails*/}
-				<input type='hidden' name='_cc' value='pavel@generalov.ca' />
+				{/*cc automated response to other emails */}
+				{/*<input type='hidden' name='_cc' value='pavel@generalov.ca' />*/}
 				{/*automated response to a client*/}
 				<input type='hidden' name='_autoresponse' value="(This is automated message - do not respond) Thank you for submitting your request. Your message has been received, and I will start working on your project on a scheduled basis." />
 			</form>
