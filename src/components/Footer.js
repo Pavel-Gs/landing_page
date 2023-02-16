@@ -55,7 +55,7 @@ export const FooterStructure = () => {
 				{/* HIDDEN VALUES */}
 
 				{/*cc automated response to other emails */}
-				{/*<input type='hidden' name='_cc' value='pavel@generalov.ca' />*/}
+				{/*<input type='hidden' name='_cc' value='' />*/}
 				{/*automated response to a client*/}
 				<input type='hidden' name='_autoresponse' value="(This is automated message - do not respond) Thank you for submitting your request. Your message has been received, and I will start working on your project on a scheduled basis." />
 			</form>
