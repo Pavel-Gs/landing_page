@@ -3,12 +3,12 @@ import ruralImg from '../images/rural_surveys.jpg';
 import topoImg from '../images/topographic_surveys.jpg';
 import highriseImg from '../images/highrise_industry.jpg';
 import gridlinesImg from '../images/grid-lines.jpg';
-import commercialImg from '../images/commercial_surveys.jpg';
+/*import commercialImg from '../images/commercial_surveys.jpg';
 import civilImg from '../images/civil_industry.jpg';
 import residentialImg from '../images/residential_surveys.jpg';
-import cadastreImg from '../images/cadastre_surveys.jpg';
-import layoutsImg from '../images/layouts.jpg';
+import cadastreImg from '../images/cadastre_surveys.jpg';*/
 import asbuiltImg from '../images/asbuilt_surveys.jpg';
+import layoutsImg from '../images/layouts.jpg';
 
 // // PROJECTS COMPONENT // //
 
@@ -33,7 +33,7 @@ const projectsList = [{
 	h4Text: "grid-line layouts",
 	pText: "Grid lines and benchmarks for all types of construction projects",
 	id: crypto.randomUUID(),
-}, {
+},/*{
 	projectImg: commercialImg,
 	h4Text: "commercial surveys",
 	pText: "Working on a topo-plan of the gas station for their upcoming reconstruction",
@@ -53,15 +53,15 @@ const projectsList = [{
 	h4Text: "cadastre surveys*",
 	pText: "Surveying property lines*. The fence is in the right place, isn't it?",
 	id: crypto.randomUUID(),
-}, {
-	projectImg: layoutsImg,
-	h4Text: "residential layouts",
-	pText: "When property lines are re-established, a construction envelope may be calculated",
-	id: crypto.randomUUID(),
-}, {
+},*/{
 	projectImg: asbuiltImg,
 	h4Text: "as-built surveys",
 	pText: "It is a good practice to measure all corners of a form and tape the perimeter",
+	id: crypto.randomUUID(),
+},{
+	projectImg: layoutsImg,
+	h4Text: "residential layouts",
+	pText: "When property lines are re-established, a construction envelope may be calculated",
 	id: crypto.randomUUID(),
 },];
 
