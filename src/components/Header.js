@@ -49,7 +49,7 @@ export const headerIconsList = [{
 	iClass: 'fa-brands fa-linkedin',
 	id: crypto.randomUUID(),
 }, {
-	headerIconHref: 'https://www.youtube.com/watch?v=0FvEj4ed4ww&t=3s',
+	headerIconHref: 'https://youtu.be/0FvEj4ed4ww',
 	headerIconRel: 'noopener noreferrer',
 	headerIconTarget: '_blank',
 	iClass: 'fa-brands fa-square-youtube',
