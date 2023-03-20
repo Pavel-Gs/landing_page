@@ -21,6 +21,3 @@ That integration, as the name suggests, provides easy form-submission functional
 
 ### `Font Awesome`
 Provides various icons and favicons, which are styled right in the code.
-
-## How to use
-There's nothing to use, really - it's just a one-page website, made of different React components.
