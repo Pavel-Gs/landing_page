@@ -26,7 +26,7 @@ export const FooterStructure = () => {
 				CONTACT FORM
 			</button><br /><br />
 			<p>*cadastre work (when property lines are involved) is done through a partnering land surveying company, on their terms and conditions</p><br />
-			<p>Serving Metro Vancouver and Lower Mainland</p><br />
+			<p>Serving Okanagan Valley</p><br />
 
 			<ul>																					{/* iterate over footer icons (copied from the header) */}
 				{headerIconsList.map((i) => {
