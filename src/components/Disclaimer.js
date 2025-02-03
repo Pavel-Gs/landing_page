@@ -1,5 +1,5 @@
 // IMPORT HOOKS
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 // // DISCLAIMER COMPONENT // //
 
@@ -22,7 +22,11 @@ export const DisclaimerStructure = () => {
 
 
 	return (<section id='disclaimer-section' style={visibility}>		{/* visibility styles applies here */}
-		<p>Commercial use is not intended.</p>
-		<button className='btn-regular' onClick={() => {transparentDisclaimer(); setTimeout(hideDisclaimer, 600); }}>DISMISS</button> {/* Invoke transparency function first. After the animation - invoke "display: none" function */}
+		<p>
+			I'm a geomatics technologist, working with my own equipment and software.<br></br><br></br>
+			I accept work requests from local land surveying companies, civil construction firms, and private owners.<br></br><br></br>
+			To contact me, please click the "CONTACT FORM" button in the footer.
+		</p>
+		<button className='btn-regular' onClick={() => { transparentDisclaimer(); setTimeout(hideDisclaimer, 600); }}>DISMISS</button> {/* Invoke transparency function first. After the animation - invoke "display: none" function */}
 	</section>);
 }

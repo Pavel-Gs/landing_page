@@ -3,48 +3,48 @@
 // HIGHLIGHTS LIST
 const highlightsList = [{
 	iClass: 'fa-solid fa-file-signature',
-	h4Heading: "Certificate",
-	pText: "CBEPS certified. Please keep in mind - this is not the same as BCLS licensed",
+	h4Heading: "CBEPS Certified",
+	pText: "Note: this is not equivalent to BCLS licensing",
 	id: crypto.randomUUID(),
 }, {
 	iClass: 'fa-regular fa-star',
-	h4Heading: "Experience",
-	pText: "Over 15 years of experience, working with different technologies on various projects",
+	h4Heading: "15+ Years of Experience",
+	pText: "Proficient in various technologies across different project types",
 	id: crypto.randomUUID(),
 }, {
 	iClass: 'fa-solid fa-square-check',
-	h4Heading: "Quality",
-	pText: "I'm using least-squares processing software for all projects, for checking and quality assessment",
+	h4Heading: "Quality Assurance",
+	pText: "All projects undergo least-squares processing for accuracy and verification",
 	id: crypto.randomUUID(),
 }, {
 	iClass: 'fa-solid fa-truck-fast',
-	h4Heading: "Asap",
-	pText: "Most likely, I'll be able to start working on your project within 24 hours",
+	h4Heading: "Fast Turnaround",
+	pText: "Availability to start most projects within 24 hours",
 	id: crypto.randomUUID(),
 }, {
 	iClass: 'fa-solid fa-briefcase',
-	h4Heading: "Equipment",
-	pText: "Robotic Leica TCRP 1205 total station, Leica CS20 controller",
+	h4Heading: "Advanced Equipment",
+	pText: "Leica TCRP 1205 Robotic Total Station, Leica CS20 Controller",
 	id: crypto.randomUUID(),
 }, {
 	iClass: 'fa-solid fa-desktop',
-	h4Heading: "Software",
-	pText: "MicroSurvey CAD 2016 Premium, StarNet 11 Pro, QGIS",
+	h4Heading: "Professional Software",
+	pText: "MicroSurvey CAD Premium, StarNet Pro, QGIS",
 	id: crypto.randomUUID(),
 }, {
 	iClass: 'fa-solid fa-map-location-dot',
-	h4Heading: "Area",
-	pText: "Working anywhere in Metro Vancouver and Fraser Valley areas",
+	h4Heading: "Service Area",
+	pText: "Metro Vancouver & Fraser Valley",
 	id: crypto.randomUUID(),
 }, {
 	iClass: 'fa-solid fa-helmet-safety',
-	h4Heading: "Jobs",
-	pText: "Topography, layouts, benchmarks, grid-lines, cadastre*, as-builts and more...",
+	h4Heading: "Project Types",
+	pText: "Topographic surveys, layout work, benchmarks, grid-lines, cadastral services*, as-builts, and more",
 	id: crypto.randomUUID(),
 }, {
 	iClass: 'fa-solid fa-user-group',
-	h4Heading: "Crew",
-	pText: "Most of the time, I'm a one-man crew. My wife assists me with some projects",
+	h4Heading: "Solo & Small Crew",
+	pText: "Primarily a one-man operation, with occasional assistance from my wife",
 	id: crypto.randomUUID(),
 }];
 

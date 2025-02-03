@@ -25,8 +25,8 @@ export const FooterStructure = () => {
 				<i className="fa-solid fa-arrow-up-right-from-square"></i>
 				CONTACT FORM
 			</button><br /><br />
-			<p>*cadastre work (when property lines are involved) is done through a partnering land surveying company, on their terms and conditions</p><br />
-			<p>Serving Okanagan Valley</p><br />
+			<p>*cadastre-related work (involving property lines) is conducted in partnership with a licensed land surveying company under their terms and conditions</p><br />
+			<p>Serving Metro Vancouver & the Lower Mainland</p><br />
 
 			<ul>																					{/* iterate over footer icons (copied from the header) */}
 				{headerIconsList.map((i) => {
@@ -43,13 +43,13 @@ export const FooterStructure = () => {
 				<h4>CONTACTS</h4>
 				<input type='text' name='name' placeholder="Full name" required />					{/*client's name*/}
 				<input type='email' name='email' placeholder="Email address" required />			{/*client's email*/}
-				<input type='text' name='company' placeholder="Company" />							{/*client's company*/}
-				<input type='tel' name='phone' placeholder="Phone" required />						{/*client's phone*/}
+				<input type='text' name='company' placeholder="Company name (if applicable)" />							{/*client's company*/}
+				<input type='tel' name='phone' placeholder="Phone number" required />						{/*client's phone*/}
 				<h4>PROJECT</h4>
-				<input type='text' name='address' placeholder="Project's address" required />		{/*client's project address*/}
+				<input type='text' name='address' placeholder="Project address" required />		{/*client's project address*/}
 				<input type='text' name='request' placeholder="Work request" required />			{/*client's work order*/}
-				<input type='text' name='comments' placeholder="Additional comments, if any..." />	{/*client's comments*/}
-				<p>*cadastre work (when property lines are involved) is done through a partnering land surveying company, on their terms and conditions</p>
+				<input type='text' name='comments' placeholder="Additional comments (if any)" />	{/*client's comments*/}
+				<p>*cadastre-related work (involving property lines) is conducted in partnership with a licensed land surveying company under their terms and conditions</p>
 				<button type='submit' className='btn-regular'>SEND</button>
 
 				{/* HIDDEN VALUES */}

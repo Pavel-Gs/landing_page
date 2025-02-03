@@ -16,22 +16,22 @@ import layoutsImg from '../images/layouts.jpg';
 const projectsList = [{
 	projectImg: ruralImg,
 	h4Text: "rural surveys",
-	pText: "Traversing across steep hills, creeks and forests - is a part of the job",
+	pText: "Traversing steep hills, creeks, and forests is part of the job",
 	id: crypto.randomUUID(),
 }, {
 	projectImg: topoImg,
 	h4Text: "topography",
-	pText: "Topography and topographic plans. Delivery formats are cad, pdf and/or paper",
+	pText: "Creating topographic plans in CAD, PDF, or paper formats",
 	id: crypto.randomUUID(),
 }, {
 	projectImg: highriseImg,
 	h4Text: "high-rise support",
-	pText: "Full geomatic support for high-rises, from a zero-cycle and until the final stage",
+	pText: "Providing full geomatics support from zero-cycle to completion",
 	id: crypto.randomUUID(),
 }, {
 	projectImg: gridlinesImg,
 	h4Text: "grid-line layouts",
-	pText: "Grid lines and benchmarks for all types of construction projects",
+	pText: "Laying out grid lines and benchmarks for all construction types",
 	id: crypto.randomUUID(),
 },/*{
 	projectImg: commercialImg,
@@ -56,12 +56,12 @@ const projectsList = [{
 },*/{
 	projectImg: asbuiltImg,
 	h4Text: "as-built surveys",
-	pText: "It is a good practice to measure all corners of a form and tape the perimeter",
+	pText: "Measuring all form corners and verifying perimeter dimensions",
 	id: crypto.randomUUID(),
 },{
 	projectImg: layoutsImg,
 	h4Text: "residential layouts",
-	pText: "When property lines are re-established, a construction envelope may be calculated",
+	pText: "Re-establishing property lines and calculating construction envelopes",
 	id: crypto.randomUUID(),
 },];
 
@@ -69,7 +69,7 @@ const projectsList = [{
 export const ProjectsStructure = () => {
 	return (<section className='chapter' id='projects-section'>
 		<h2>PROJECTS</h2>
-		<h4 id='projects-h4'>Some typical jobs and photos from the field</h4><br />
+		<h4 id='projects-h4'>Examples of work & field photos</h4><br />
 		<article>
 			{projectsList.map((i) => {
 				return (<ProjectsRender {...i} key={i.id} />)

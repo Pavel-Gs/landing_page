@@ -4,8 +4,8 @@
 export const HeroStructure = () => {
 	return (<section className='chapter' id='hero-section'>
 		<article>
-			<h1>PRIVATE CONTRACTOR FOR YOUR PROJECT</h1>
-			<p>land surveying, civil, cadastre*</p>
+			<h1>PRIVATE GEOMATICS CONTRACTOR</h1>
+			<p>specializing in land surveying, civil projects and cadastre*</p>
 			<a href='#about-section'>LEARN MORE</a>
 		</article>
 	</section>);

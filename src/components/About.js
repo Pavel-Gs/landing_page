@@ -9,9 +9,10 @@ export const AboutStructure = () => {
 			<div id='about-txt-container'>
 				<h4>Background</h4><br />
 				<p>
-					I started my career in geomatics when I was a student, in my 2nd year of education at Moscow State University of Geodesy and Cartography. Later, trying to combine education and work, I moved from a cadastral survey company to a small family-owned civil construction company. After graduation, I was working in a high-rise industry as an on-site geomatic engineer.<br /><br />
-					After moving to Canada in 2013 and working in the land surveying industry, I decided to pursue professional accreditation by <a className='about-links' href='https://drive.google.com/file/d/1eXcsDvLOU8kbuAzGn88OwOfkyE1ysV41/view?usp=sharing' target='_blank' rel='noreferrer noopener'>CBEPS</a> and give it a try to self-employment.<br /><br />
-					Being self-employed since 2018, I've completed <a className='about-links' href='https://drive.google.com/file/d/1Fh9cvHtyk_Cof8Qf9zvUoJQgI_FrI80w/view?usp=share_link' target='_blank' rel='noreferrer noopener'>various projects</a> of different types and scales, all over Metro Vancouver and Fraser Valley.
+					I began my career in geomatics during my second year at Moscow State University of Geodesy and Cartography. While balancing education and work, I transitioned from a cadastral survey company to a small, family-owned civil construction business.<br /><br />
+					After graduating, I worked in the high-rise construction industry as an on-site geomatics engineer.<br /><br />
+					After moving to Canada in 2014 and working in the land surveying industry, I decided to pursue professional accreditation through <a className='about-links' href='https://cbeps-cceag.ca/' target='_blank' rel='noreferrer noopener'>CBEPS</a> and explore opportunities as a contractor.<br /><br />
+					Since 2018, I have completed <a className='about-links' href='https://drive.google.com/file/d/1Fh9cvHtyk_Cof8Qf9zvUoJQgI_FrI80w/view?usp=share_link' target='_blank' rel='noreferrer noopener'>various projects</a> across Metro Vancouver and the Fraser Valley.
 				</p>
 			</div>
 		</article>
