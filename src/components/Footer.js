@@ -39,14 +39,14 @@ export const FooterStructure = () => {
 		{/*// // CONTACT FORM STRUCTURE // //*/}
 		<div style={animation} id='contact-form-container'>											{/* the animation style applies here */}
 			<i onClick={handleRollDown} className="fa-solid fa-xmark"></i>							{/* invoke the form's roll DOWN function */}
-			<form action='https://formsubmit.co/1f02d58477fe20e850b934af3418c8bb' method='POST'>
+			<form action='https://formspree.io/f/xldbdjrw' method='POST'>							{/* Using Formspree. Previously used FormSubmit is now being blocked by BitDefender (old action='https://formsubmit.co/1f02d58477fe20e850b934af3418c8bb'). */}
 				<h4>CONTACTS</h4>
 				<input type='text' name='name' placeholder="Full name" required />					{/*client's name*/}
 				<input type='email' name='email' placeholder="Email address" required />			{/*client's email*/}
-				<input type='text' name='company' placeholder="Company name (if applicable)" />							{/*client's company*/}
-				<input type='tel' name='phone' placeholder="Phone number" required />						{/*client's phone*/}
+				<input type='text' name='company' placeholder="Company name (if applicable)" />		{/*client's company*/}
+				<input type='tel' name='phone' placeholder="Phone number" required />				{/*client's phone*/}
 				<h4>PROJECT</h4>
-				<input type='text' name='address' placeholder="Project address" required />		{/*client's project address*/}
+				<input type='text' name='address' placeholder="Project address" required />			{/*client's project address*/}
 				<input type='text' name='request' placeholder="Work request" required />			{/*client's work order*/}
 				<input type='text' name='comments' placeholder="Additional comments (if any)" />	{/*client's comments*/}
 				<p>*cadastre-related work (involving property lines) is conducted in partnership with a licensed land surveying company under their terms and conditions</p>
