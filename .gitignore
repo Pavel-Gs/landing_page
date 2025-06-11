@@ -12,6 +12,9 @@
 /build
 
 # misc
+.vscode/
+.cspell/
+.vs/
 .DS_Store
 .env.local
 .env.development.local
