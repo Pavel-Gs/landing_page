@@ -6,7 +6,7 @@ import './components/About.css';
 import './components/Highlights.css';
 import './components/Projects.css';
 import './components/Footer.css';
-import './components/Disclaimer.css';
+//import './components/Disclaimer.css';
 
 // IMPORT ALL COMPONENTS
 import { HeaderStructure } from './components/Header.js';
@@ -15,7 +15,7 @@ import { AboutStructure } from './components/About.js';
 import { HighlightsStructure } from './components/Highlights.js';
 import { ProjectsStructure } from './components/Projects.js';
 import { FooterStructure } from './components/Footer.js';
-import { DisclaimerStructure } from './components/Disclaimer.js';
+//import { DisclaimerStructure } from './components/Disclaimer.js';
 
 // RETURN ALL COMPONENTS
 function App() {
