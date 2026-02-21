@@ -26,7 +26,7 @@ function App() {
 		<HighlightsStructure />
 		<ProjectsStructure />
 		<FooterStructure />
-		<DisclaimerStructure />
+		{/* <DisclaimerStructure /> */} {/* not using this popup window */}
 	</>);
 }
 
